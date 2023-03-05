@@ -1,11 +1,8 @@
-Django==4.1
-uwsgi==2.0.20
-requests
-pillow==8.4.0
-apscheduler==3.8.1
+django==4.1.2
 dj-database-url
 dj-static
 python-decouple
 django-environ
 gunicorn
+psycopg2-binary
 whitenoise

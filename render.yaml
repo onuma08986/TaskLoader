@@ -1,13 +1,13 @@
 services:
   - type: web
-    name: taskloader
+    name: django_render
     env: python
     region: singapore
     plan: free
     branch: main
     healthCheckPath: /
-    buildCommand: './build.sh'
-    startCommand: "gunicorn djangoproj.wsgi:application"
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn mysite.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
