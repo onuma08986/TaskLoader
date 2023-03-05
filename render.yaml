@@ -7,7 +7,7 @@ services:
     branch: main
     healthCheckPath: /
     buildCommand: './build.sh'
-    startCommand: "gunicorn mysite.wsgi:application"
+    startCommand: "gunicorn djangoproj.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
