@@ -1,6 +1,11 @@
 Django==4.1
-dj-database-url==0.5.0
 uwsgi==2.0.20
-requests==2.26.0
+requests
 pillow==8.4.0
 apscheduler==3.8.1
+dj-database-url
+dj-static
+python-decouple
+django-environ
+gunicorn
+whitenoise

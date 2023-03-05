@@ -3,11 +3,11 @@ services:
     name: taskloader
     env: python
     region: singapore
-    buildCommand: './build.sh'
-    command: uwsgi --socket :8001 --module djangoproj.wsgi --enable-threads
     plan: free
     branch: main
     healthCheckPath: /
+    buildCommand: './build.sh'
+    startCommand: "gunicorn mysite.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
